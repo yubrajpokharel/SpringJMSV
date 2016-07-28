@@ -14,6 +14,7 @@ public class BackMain {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans-back.xml");
         BackOffice backOffice = (BackOffice) context.getBean("backOffice");
         Mail mail = backOffice.receiveMail();
+        System.out.println("Mail Received");
         System.out.println("Mail: no : "+mail.getMailId() + " Mail Country : "+mail.getCountry() + " Mail Weight :"+mail.getWeight());
     }
 }
